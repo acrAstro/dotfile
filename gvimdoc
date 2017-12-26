@@ -1,0 +1,56 @@
+" color scheme of the moment:
+syntax on 
+
+set autoindent
+
+set guifont=monospace\ 11
+set number
+set ignorecase
+set autoindent
+set ruler
+set incsearch
+set noswapfile
+set guioptions+=b
+set nowrap
+set smartindent
+set cindent
+"set foldmethod=syntax
+"set foldcolumn=2
+set tabstop=4 shiftwidth=4 expandtab
+
+au BufRead,BufNewFile *.tex setlocal textwidth=80
+au BufRead,BufNewFile *.py setlocal textwidth=80
+au BufRead,BufNewFile *.cpp setlocal textwidth=80
+au BufRead,BufNewFile *.hpp setlocal textwidth=80
+
+filetype on
+
+colorscheme desert
+
+if &t_Co > 2 || has("gui_running")
+	syntax on
+	set hlsearch
+endif
+
+syntax match Tab /\t/
+hi Tab gui=underline guifg=blue ctermbg=blue
+
+if &diff
+	" diff mode
+	set diffopt+=iwhite
+endif
+
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+vnoremap <Tab> >
+vnoremap <S-Tab> <
+
+set wildchar=<Tab> wildmenu wildmode=full
+set wildcharm=<C-Z>
+nnoremap <F10> :b <C-Z>
+
+"set colorcolumn=80
+
+let g:load_doxygen_syntax=1
+
