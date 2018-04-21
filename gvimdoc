@@ -53,6 +53,9 @@ endif
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<C-c>O
+
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 " in normal mode F2 will save the file
