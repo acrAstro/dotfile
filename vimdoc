@@ -33,6 +33,8 @@ au BufRead,BufNewFile *.cxx setlocal textwidth=80
 au BufRead,BufNewFile *.hxx setlocal textwidth=80
 au BufRead,BufNewFile *.cpp setlocal textwidth=80
 au BufRead,BufNewFile *.hpp setlocal textwidth=80
+au BufRead,BufNewFile *.md setlocal textwidth=80
+au BufRead,BufNewFile *.go setlocal textwidth=80
 filetype on
 
 colorscheme desert
