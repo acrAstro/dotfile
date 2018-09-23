@@ -58,6 +58,12 @@ behave mswin
 inoremap { {}<Left>
 inoremap {<CR> {<CR>}<C-c>O
 
+inoremap ( ()<Left>
+inoremap (<CR> ()
+
+inoremap [ []<Left>
+inoremap [<CR> []
+
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 " in normal mode F2 will save the file
